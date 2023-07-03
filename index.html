@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <div>
+      <p class="titulo">Quais são as suas</p>
+      <h1 class="tituloprincipal">SÉRIES FAVORITAS</h1>
+      <p class="subtitulo">
+        Em parceria com o Alura+, desenvolvemos esta pesquisa com o objetivo de
+        criar novos conteúdos baseados nas preferências dos clientes!
+        <br />
+        <br />
+        <strong
+          >Participe da pesquisa e nos ajude com a criação de novas
+          séries.</strong
+        >
+      </p>
+      <img src="assets/Logo.png" alt="logo do Alura+" class="logo" />
+    </div>
+
+    <form class="formulario">
+      <fieldset class="grupo1">
+        <!--Serve para agrupar elementos-->
+        <div class="identificacao1">
+          <label for="nome">Primeiro Nome</label>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="Primeiro Nome"
+            required
+          />
+          <!--Nome é obrigatório, não tem como enviar o formulario sem completar o nome-->
+        </div>
+        <div class="identificacao2">
+          <label for="sobrenome">Sobrenome</label>
+          <input
+            type="text"
+            name="sobrenome"
+            id="sobrenome"
+            placeholder="Sobrenome"
+            required
+          />
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="E-mail"
+          required
+        />
+      </div>
+
+      <div class="genero">
+        <label>Quais gêneros de série costuma assistir</label> <br />
+        <div>
+          <label>
+            <input type="radio" name="genero" value="terror" checked /> terror
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="genero" value="acao" /> ação
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="genero" value="romance" /> romance
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="genero" value="comedia" /> comédia
+          </label>
+        </div>
+        <!--usar mesmo name no input type radio pra que quando selecionar um a outra seja desmarcada-->
+      </div>
+
+      <div>
+        <label for="tempo">Quantas horas de séries assiste por semana</label>
+        <!--Serve para fazer o select e depois aparecer as opções para selecionar-->
+        <select id="tempo">
+          <option selected disabled value="">
+            Selecione
+            <!-- selecione sem valor, utilizada como rótulo inicial. Poderia nomear
+            como "selecione" -->
+          </option>
+          <option class="opcao">1 hora ou menos</option>
+          <option class="opcao">2 a 3 horas</option>
+          <option class="opcao">3 a 4 horas</option>
+          <option class="opcao">5 ou mais</option>
+        </select>
+      </div>
+
+      <fieldset class="grupo2">
+        <!--Serve para agrupar elementos-->
+        <div>
+          <label>Selecione as séries que você já assistiu</label> <br />
+          <br />
+          <div>
+            <input type="checkbox" id="b99" name="b99" value="brooklyn99" />
+            <!--Deixa selecionar várias opções-->
+            <label for="b99">Brooklyn Nine-Nine</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="hill"
+              name="hill"
+              value="maldicaodaresidenciahill"
+            />
+            <label for="hill">A Maldição da Residência Hill</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="gambito"
+              name="gambito"
+              value="gambitodarainha"
+            />
+            <label for="gambito"> O Gambito da Rainha </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="outlander"
+              name="outlander"
+              value="outlander"
+            />
+            <label for="outlander">Outlander</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div>
+        <label>Para você, o que faz uma série ser ótima?</label>
+        <!--área para escrever um texto maior-->
+        <textarea id="escrevertexto" name="escrevertexto"> </textarea>
+      </div>
+
+      <button type="submit" class="botao">
+        <!--para enviar o formulário-->
+        Enviar
+      </button>
+    </form>
+  </body>
+</html>
